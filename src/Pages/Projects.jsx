@@ -21,7 +21,7 @@ import {
   Check,
 } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000/api/projects";
+const API_URL = "http://127.0.0.1:8000/api/projects/";
 
 const EMPTY_FORM = {
   name: "",
@@ -183,7 +183,7 @@ function Projects() {
 
       if (editingProject) {
         const response = await axios.put(
-          `${API_URL}/${editingProject.id}`,
+          `${API_URL}${editingProject.id}/`,
           payload
         );
 
@@ -249,7 +249,7 @@ function Projects() {
       setIsDeleting(true);
 
       await axios.delete(
-        `${API_URL}/${deleteProject.id}`
+        `${API_URL}${deleteProject.id}/`
       );
 
       setProjects((prev) =>
