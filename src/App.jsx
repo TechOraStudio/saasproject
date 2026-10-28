@@ -13,7 +13,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Router>
+    <Router basename="/saasproject/">
       <div className="flex h-screen bg-slate-950 font-sans antialiased overflow-hidden">
         {/* SIRF EK SIDEBAR YAHAN RENDER HOGA */}
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
